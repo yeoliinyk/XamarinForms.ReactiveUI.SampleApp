@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    x:TypeArguments="main:MainViewModel"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlowersPlanner"
+    xmlns:base="clr-namespace:FlowersPlanner.Presentation.Base;assembly=FlowersPlanner"
+    xmlns:main="clr-namespace:FlowersPlanner.Presentation.Main;assembly=FlowersPlanner"
+    xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
+    xmlns:localization="clr-namespace:FlowersPlanner.Localization;assembly=FlowersPlanner"
+    x:Class="FlowersPlanner.Presentation.Main.MainView">
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Label
+            Text="Hello Moto :)" />
+        <Button
+            x:Name="Button"
+            Text="Build Death Star" />
+    </StackLayout>
+</base:BaseContentPage>

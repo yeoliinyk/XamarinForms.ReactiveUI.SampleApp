@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlowersPlanner.App">
+	<Application.Resources>
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="FontMontserratLight" x:TypeArguments="x:String">            
+                <OnPlatform.iOS>Montserrat-Light</OnPlatform.iOS>
+                <OnPlatform.Android>Montserrat-Light.otf#Montserrat%20Light</OnPlatform.Android>
+            </OnPlatform>
+
+            <OnPlatform x:Key="FontMontserratRegular" x:TypeArguments="x:String">            
+                <OnPlatform.iOS>Montserrat-Regular</OnPlatform.iOS>
+                <OnPlatform.Android>Montserrat-Regular.otf#Montserrat%20Regular</OnPlatform.Android>
+            </OnPlatform>
+
+            <OnPlatform x:Key="FontMontserratMedium" x:TypeArguments="x:String">            
+                <OnPlatform.iOS>Montserrat-Medium</OnPlatform.iOS>
+                <OnPlatform.Android>Montserrat-Medium.otf#Montserrat%20Medium</OnPlatform.Android>
+            </OnPlatform>
+            
+            <OnPlatform x:Key="FontMontserratBold" x:TypeArguments="x:String">            
+                <OnPlatform.iOS>Montserrat-Bold</OnPlatform.iOS>
+                <OnPlatform.Android>Montserrat-Bold.otf#Montserrat%20Bold</OnPlatform.Android>
+            </OnPlatform>
+            
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Register" xml:space="preserve">
+        <value>Зарегистрироваться</value>
+        <comment>label for register button on login screen</comment>
+    </data>
+    <data name="SignIn" xml:space="preserve">
+        <value>Войти</value>
+        <comment>label for sign in button on login screen</comment>
+    </data>
+    <data name="Name" xml:space="preserve">
+        <value>Имя</value>
+        <comment>placeholder on register screen</comment>
+    </data>
+    <data name="PhoneNumber" xml:space="preserve">
+        <value>Номер телефона</value>
+        <comment>placeholder on register screen</comment>
+    </data>
+    <data name="Email" xml:space="preserve">
+        <value>Email</value>
+        <comment>placeholder on register screen</comment>
+    </data>
+    <data name="Password" xml:space="preserve">
+        <value>Пароль</value>
+        <comment>placeholder on register screen</comment>
+    </data>
+    <data name="ConfirmPassword" xml:space="preserve">
+        <value>Подтверждение пароля</value>
+        <comment>placeholder on register screen</comment>
+    </data>
+    <data name="IAmGuy" xml:space="preserve">
+        <value>Я - ПАРЕНЬ</value>
+        <comment>label on register screen</comment>
+    </data>
+    <data name="IAmGirl" xml:space="preserve">
+        <value>Я - ДЕВУШКА</value>
+        <comment>label on register screen</comment>
+    </data>
+    <data name="YourPassword" xml:space="preserve">
+        <value>Ваш пароль</value>
+        <comment>label on register screen</comment>
+    </data>
+    <data name="ComeUpWithPassword" xml:space="preserve">
+        <value>Придумайте пароль который вы сможете легко запомнить</value>
+        <comment>label on register screen</comment>
+    </data>
+    <data name="IHaveAnAccount" xml:space="preserve">
+        <value>У меня уже есть аккаунт</value>
+        <comment>label on register screen</comment>
+    </data>
+
+    <!-- Sign In -->
+    <data name="Hello" xml:space="preserve">
+        <value>Привет</value>
+        <comment>label on login screen</comment>
+    </data>
+    <data name="Greatings" xml:space="preserve">
+        <value>Мы рады снова вас видеть в самом удобном планировщике цветочных поздравлений в мире!</value>
+        <comment>label on login screen</comment>
+    </data>
+    
+    <!--  Validation errors  -->
+    <data name="EmptyEntryError" xml:space="preserve">
+        <value>Поле не может быть пустым</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="NameLengthError" xml:space="preserve">
+        <value>Имя слишком короткое</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="PhoneNumberLengthError" xml:space="preserve">
+        <value>Неверный формат номера телефона</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="EmailFormatError" xml:space="preserve">
+        <value>Неверный email</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="PasswordLengthError" xml:space="preserve">
+        <value>Пароль должен содержать минимум 8 символов</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="PasswordsDoNotMatch" xml:space="preserve">
+        <value>Пароли не совпадают</value>
+        <comment>validation message</comment>
+    </data>
+    <data name="PasswordRequirementsError" xml:space="preserve">
+        <value>Пароль должен быть минимум 8 символов и содержать хотя бы одну цифру, одну маленькую букву и одну заглавную букву.</value>
+        <comment>validation message</comment>
+    </data>
+</root>

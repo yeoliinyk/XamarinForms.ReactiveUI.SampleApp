@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:FlowersPlanner.Presentation.Base;assembly=FlowersPlanner"
+    xmlns:registration="clr-namespace:FlowersPlanner.Presentation.Registration;assembly=FlowersPlanner"
+    xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
+    xmlns:localization="clr-namespace:FlowersPlanner.Localization;assembly=FlowersPlanner"
+    xmlns:controls="clr-namespace:FlowersPlanner.Presentation.Controls;assembly=FlowersPlanner"
+    x:TypeArguments="registration:RegistrationViewModel"
+    x:Class="FlowersPlanner.Presentation.Registration.RegistrationView">
+    <base:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="EntryWithIcon"
+                TargetType="xfx:XfxEntry">
+                <Setter
+                    Property="Grid.Row"
+                    Value="0" />
+                <Setter
+                    Property="Grid.Column"
+                    Value="0" />
+                <Setter
+                    Property="Grid.ColumnSpan"
+                    Value="2" />
+                <Setter
+                    Property="PlaceholderColor"
+                    Value="#C4C4C4" />
+                <Setter
+                    Property="ActivePlaceholderColor"
+                    Value="Gray" />
+                <Setter
+                    Property="TextColor"
+                    Value="Black" />
+                <Setter
+                    Property="FontSize"
+                    Value="14" />
+                <Setter
+                    Property="FontFamily"
+                    Value="{StaticResource FontMontserratRegular}" />
+            </Style>
+            <Style
+                x:Key="EntryIcon"
+                TargetType="Image">
+                <Setter
+                    Property="Aspect"
+                    Value="AspectFit" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="End" />
+                <Setter
+                    Property="BackgroundColor"
+                    Value="White" />
+            </Style>
+            <Style
+                x:Key="SwitchLabel"
+                TargetType="Label">
+                <Setter
+                    Property="FontFamily"
+                    Value="{StaticResource FontMontserratBold}" />
+                <Setter
+                    Property="FontSize"
+                    Value="9" />
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="FillAndExpand" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalTextAlignment"
+                    Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </base:BaseContentPage.Resources>
+    <!--    <ScrollView>-->
+    <AbsoluteLayout
+        x:Name="RootLayout">
+        <Image
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.08,AutoSize,AutoSize"
+            x:Name="LogoImage"
+            Source="logo" />
+        <StackLayout
+            x:Name="FirstStepStack"
+            AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,0.6,AutoSize"
+            Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="12" />
+                </Grid.ColumnDefinitions>
+                <xfx:XfxEntry
+                    x:Name="NameEntry"
+                    Style="{StaticResource EntryWithIcon}"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Default"
+                    Placeholder="{localization:Translate Name}" />
+                <ContentView
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Padding="0,0,0,5">
+                    <Image
+                        Source="ic_name"
+                        Style="{StaticResource EntryIcon}" />
+                </ContentView>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="12" />
+                </Grid.ColumnDefinitions>
+                <xfx:XfxEntry
+                    x:Name="PhoneEntry"
+                    Style="{StaticResource EntryWithIcon}"
+                    Keyboard="Telephone"
+                    Placeholder="{localization:Translate PhoneNumber}" />
+                <ContentView
+                    Grid.Row="0"
+                    Padding="0,0,0,5"
+                    Grid.Column="1">
+                    <Image
+                        Source="ic_phone"
+                        Style="{StaticResource EntryIcon}" />
+                </ContentView>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="12" />
+                </Grid.ColumnDefinitions>
+                <xfx:XfxEntry
+                    x:Name="EmailEntry"
+                    Style="{StaticResource EntryWithIcon}"
+                    Keyboard="Email"
+                    Placeholder="{localization:Translate Email}" />
+                <ContentView
+                    Grid.Row="0"
+                    Padding="0,0,0,5"
+                    Grid.Column="1">
+                    <Image
+                        Source="ic_mail"
+                        Style="{StaticResource EntryIcon}" />
+                </ContentView>
+            </Grid>
+            <controls:CustomSelector
+                x:Name="GenderSelector"
+                Margin="0,20,0,0"
+                LeftText="{localization:Translate IAmGuy}"
+                RightText="{localization:Translate IAmGirl}"
+                NormalColor="#727272"
+                SelectedColor="#404040"
+                FontSize="10"
+                NormalFontFamily="{StaticResource FontMontserratMedium}"
+                SelectedFontFamily="{StaticResource FontMontserratBold}" />
+        </StackLayout>
+        <StackLayout
+            x:Name="SecondStepStack"
+            AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,0.6,AutoSize"
+            Orientation="Vertical"
+            IsVisible="false">
+            <Label
+                Text="{localization:Translate YourPassword}"
+                FontSize="19"
+                TextColor="#070707"
+                FontFamily="{StaticResource FontMontserratBold}" />
+            <Label
+                Text="{localization:Translate ComeUpWithPassword}"
+                FontSize="12"
+                TextColor="#070707"
+                FontFamily="{StaticResource FontMontserratLight}" />
+            <BoxView
+                HeightRequest="20" />
+            <xfx:XfxEntry
+                x:Name="PasswordEntry"
+                Style="{StaticResource EntryWithIcon}"
+                Keyboard="Default"
+                IsPassword="true"
+                Placeholder="{localization:Translate Password}" />
+            <xfx:XfxEntry
+                x:Name="ConfirmPasswordEntry"
+                Style="{StaticResource EntryWithIcon}"
+                Keyboard="Default"
+                IsPassword="true"
+                Placeholder="{localization:Translate ConfirmPassword}" />
+        </StackLayout>
+        <StackLayout
+            x:Name="LoginStack"
+            AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,0.6,AutoSize"
+            Orientation="Vertical"
+            IsVisible="false">
+            <Label
+                Text="{localization:Translate Hello}"
+                FontSize="19"
+                TextColor="#070707"
+                FontFamily="{StaticResource FontMontserratBold}" />
+            <Label
+                Text="{localization:Translate Greatings}"
+                FontSize="12"
+                TextColor="#070707"
+                FontFamily="{StaticResource FontMontserratLight}" />
+            <BoxView
+                HeightRequest="20" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="12" />
+                </Grid.ColumnDefinitions>
+                <xfx:XfxEntry
+                    x:Name="LoginEmailEntry"
+                    Style="{StaticResource EntryWithIcon}"
+                    Keyboard="Email"
+                    Placeholder="{localization:Translate Email}" />
+                <ContentView
+                    Grid.Row="0"
+                    Padding="0,0,0,5"
+                    Grid.Column="1">
+                    <Image
+                        Source="ic_mail"
+                        Style="{StaticResource EntryIcon}" />
+                </ContentView>
+            </Grid>
+            <xfx:XfxEntry
+                x:Name="LoginPasswordEntry"
+                Style="{StaticResource EntryWithIcon}"
+                Keyboard="Default"
+                IsPassword="true"
+                Placeholder="{localization:Translate Password}" />
+        </StackLayout>
+        <StackLayout
+            AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+            AbsoluteLayout.LayoutBounds="0.5,0.9,0.6,AutoSize"
+            Orientation="Vertical"
+            Spacing="10">
+            <Button
+                x:Name="RegisterButton"
+                BackgroundColor="Black"
+                BorderRadius="0"
+                BorderColor="Transparent"
+                FontSize="14"
+                Text="{localization:Translate Register}"
+                FontFamily="{StaticResource FontMontserratMedium}"
+                TextColor="#F3F3F3" />
+            <StackLayout
+                x:Name="LoginLink"
+                Orientation="Vertical"
+                HorizontalOptions="Center"
+                Padding="0,5,0,5"
+                Spacing="0">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnLoginTapped" />
+                </StackLayout.GestureRecognizers>
+                <Label
+                    Text="{localization:Translate IHaveAnAccount}"
+                    FontSize="12"
+                    TextColor="#362323"
+                    FontFamily="{StaticResource FontMontserratMedium}" />
+                <BoxView
+                    HeightRequest="1"
+                    BackgroundColor="#362323" />
+            </StackLayout>
+        </StackLayout>
+        <Button
+            x:Name="BackButton"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize"
+            HeightRequest="48"
+            WidthRequest="48"
+            Image="ic_back" />
+    </AbsoluteLayout>
+    <!--    </ScrollView>-->
+</base:BaseContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls"
+    x:Class="FlowersPlanner.Presentation.Controls.XfxEntryWithIcon">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition
+            Width="*" />
+    </Grid.ColumnDefinitions>
+    <xfx:XfxEntry
+        x:Name="Entry"
+        Grid.Row="0"
+        Grid.Column="0"
+        Grid.ColumnSpan="2"/>
+    <ContentView        
+        Grid.Row="0"
+        Padding="0,0,0,5"
+        Grid.Column="1">
+        <Image
+            x:Name="IconView"
+            Aspect="AspectFit"
+            VerticalOptions="Center"
+            HorizontalOptions="End"
+            BackgroundColor="White" />
+    </ContentView>
+</Grid>

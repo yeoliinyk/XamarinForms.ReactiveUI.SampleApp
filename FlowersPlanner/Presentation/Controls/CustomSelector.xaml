@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FlowersPlanner.Presentation.Controls.CustomSelector">
+    <Grid.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="SwitchLabel"
+                TargetType="Label">
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="FillAndExpand" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalTextAlignment"
+                    Value="Center" />
+            </Style>
+            <Style
+                x:Key="SwitchBox"
+                TargetType="BoxView">
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="FillAndExpand" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="End" />
+            </Style>
+        </ResourceDictionary>
+    </Grid.Resources>
+    <Grid.RowDefinitions>
+        <RowDefinition
+            Height="Auto" />
+        <RowDefinition
+            Height="2" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition
+            Width="0.5*" />
+        <ColumnDefinition
+            Width="0.5*" />
+    </Grid.ColumnDefinitions>
+    <Label
+        x:Name="LeftLabel"
+        Grid.Row="0"
+        Grid.Column="0"
+        Style="{StaticResource SwitchLabel}">
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnLeftLabelTapped" />
+        </Label.GestureRecognizers>
+    </Label>
+    <Label
+        x:Name="RightLabel"
+        Grid.Row="0"
+        Grid.Column="1"
+        Style="{StaticResource SwitchLabel}">
+
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnRightLabelTapped" />
+        </Label.GestureRecognizers>
+        
+    </Label>
+    <BoxView
+        x:Name="LeftBox"
+        Grid.Row="1"
+        Grid.Column="0"
+        Style="{StaticResource SwitchBox}"
+        />
+    <BoxView
+        x:Name="RightBox"
+        Grid.Row="1"
+        Grid.Column="1"
+        Style="{StaticResource SwitchBox}"
+        />
+</Grid>

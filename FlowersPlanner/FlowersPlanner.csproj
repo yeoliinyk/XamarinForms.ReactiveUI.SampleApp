@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="reactiveui-events-xamforms" Version="7.4.0" />
+    <PackageReference Include="reactiveui-xamforms" Version="7.4.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Xfx.Controls" Version="1.1.3" />
+    <PackageReference Include="ReactiveUI.Fody" Version="2.2.11" />
+    <PackageReference Include="Fody" Version="2.3.25" />
+    <PackageReference Include="Splat" Version="1.6.2" />
+    <PackageReference Include="FluentValidation" Version="7.4.0" />
+    <PackageReference Include="Refit" Version="4.2.0" />
+    <PackageReference Include="fusillade" Version="0.7.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation\" />
+    <Folder Include="Presentation\Base\" />
+    <Folder Include="Presentation\Main\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Presentation\Registration\" />
+    <Folder Include="Presentation\Controls\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Net\" />
+    <Folder Include="Data\Net\Tools\" />
+    <Folder Include="Data\Cache\" />
+    <Folder Include="Data\Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Presentation\Main\MainView.xaml.cs">
+      <DependentUpon>..\Presentation\MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Localization\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
